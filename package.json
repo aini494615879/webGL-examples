@@ -1,0 +1,22 @@
+{
+  "name": "webgl-examples",
+  "version": "1.0.0",
+  "description": "webGL-Learning",
+  "main": "ClickedPoints.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aini494615879/webGL-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aini494615879/webGL-examples/issues"
+  },
+  "homepage": "https://github.com/aini494615879/webGL-examples#readme"
+}
