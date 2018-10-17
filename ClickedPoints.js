@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+// ClickedPints.js (c) 2012 matsuda
+// Vertex shader program
 var VSHADER_SOURCE=
     'attribute vec4 a_Position;\n'+
     'void main(){\n'+
@@ -9,23 +12,25 @@ var FSHADER_SOURCE=
     'gl_FragColor=vec4(1.0,0.0,0.0,1.0);\n'+
     '}\n';
 function main() {
-    var canvas=document.getElementById('webgl');
-    var gl=getWebGLContext(canvas);
-    if(!gl){
-        console.log('Failed to get the rendering context for webgl.');
-        return;
-    }
-    if(!initShaders(gl,VSHADER_SOURCE,FSHADER_SOURCE)){
-        console.log('Failed to initialize shaders.');
-        return;
-    }
-    var a_Position=gl.getAttribLocation(gl.program,'a_Position');
-    if(a_Position<0){
-        console.log('Failed to get the storage location of a_Position.');
-        return;
-    }
-    gl.getVertexAttrib3f(a_Position,0.0,0.0,0.0);
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawArrays(gl.POINTS,0,1);
+	var canvas=document.getElementById('webgl');
+	var gl=getWebGLContext(canvas);
+	if(!gl){
+		console.log('Failed to get the rendering context for webgl.');
+		return;
+	}
+	if(!initShaders(gl,VSHADER_SOURCE,FSHADER_SOURCE)){
+		console.log('Failed to initialize shaders.');
+		return;
+	}
+	var a_Position=gl.getAttribLocation(gl.program,'a_Position');
+	if(a_Position<0){
+		console.log('Failed to get the storage location of a_Position.');
+		return;
+	}
+	gl.getVertexAttrib3f(a_Position,0.0,0.0,0.0);
+	gl.clearColor(0.0, 0.0, 0.0, 1.0);
+	gl.clear(gl.COLOR_BUFFER_BIT);
+	gl.drawArrays(gl.POINTS,0,1);
+
+
 }
